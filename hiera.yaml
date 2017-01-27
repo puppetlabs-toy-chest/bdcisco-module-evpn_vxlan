@@ -2,11 +2,13 @@
 version: 4
 datadir: data
 hierarchy:
-  - name: "VXLan Role (trusted data)"
+  - name: "VXLan Tier (trusted data)"
     backend: yaml
-    path: "evpn_vxlan_role/%{trusted.extensions.pp_apptier}"
-  - name: "VXLan Role (untrusted data)"
+    path: "evpn_vxlan_tier/%{trusted.extensions.pp_apptier}"
+
+  - name: "VXLan Tier (untrusted data)"
     backend: yaml
-    path: "evpn_vxlan_role/%{facts.evpn_vxlan_role}"
+    path: "evpn_vxlan_tier/%{facts.evpn_vxlan_tier}"
+
   - name: "common"
     backend: yaml
